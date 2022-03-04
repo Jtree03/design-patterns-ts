@@ -15,3 +15,8 @@
 1. 각 패턴의 README.md를 읽습니다.
 2. 구현된 코드를 봅니다.
 3. 테스트 코드를 보고 사용 방법을 익힙니다.
+
+## 목차
+
+[01. Singleton Pattern](https://github.com/Jtree03/design-patterns-ts/tree/main/design-patterns/01.%20singleton)  
+[02. Proxy Pattern](https://github.com/Jtree03/design-patterns-ts/tree/main/design-patterns/02.%20proxy)
