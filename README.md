@@ -20,3 +20,4 @@
 
 [01. Singleton Pattern](https://github.com/Jtree03/design-patterns-ts/tree/main/design-patterns/01.%20singleton)  
 [02. Proxy Pattern](https://github.com/Jtree03/design-patterns-ts/tree/main/design-patterns/02.%20proxy)
+[03. Observer Pattern](https://github.com/Jtree03/design-patterns-ts/tree/main/design-patterns/03.%20observer)
