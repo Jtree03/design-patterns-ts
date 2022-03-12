@@ -4,9 +4,14 @@ describe('observer', () => {
   let cb: Function;
   let observable: Observable<string>;
 
-  beforeAll(() => {
+  beforeEach(() => {
     cb = () => {};
     observable = new Observable<string>();
+  });
+
+  afterEach(() => {
+    cb = null;
+    observable = null;
   });
 
   test('observable is defined', () => {
@@ -20,6 +25,7 @@ describe('observer', () => {
   });
 
   test('observable call unsubscribe', () => {
+    observable.subscribe(cb);
     observable.unsubscribe(cb);
 
     expect(observable.getObservers().length).toBe(0);

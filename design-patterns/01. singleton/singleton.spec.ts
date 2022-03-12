@@ -5,8 +5,12 @@ describe('singleton', () => {
   describe('class version', () => {
     let counter: CounterClass;
 
-    beforeAll(() => {
+    beforeEach(() => {
       counter = new CounterClass();
+    });
+
+    afterEach(() => {
+      counter = null;
     });
 
     test('counter is instance', () => {
@@ -43,20 +47,30 @@ describe('singleton', () => {
   });
 
   describe('object version', () => {
+    let counterObject;
+
+    beforeEach(() => {
+      counterObject = Object.create(CounterObject);
+    });
+
+    afterEach(() => {
+      counterObject = null;
+    });
+
     test('counter is object', () => {
-      expect(CounterObject).toBeDefined();
+      expect(counterObject).toBeDefined();
     });
 
     test('counter call increment method', () => {
-      expect(CounterObject.getCount()).toBe(0);
-      CounterObject.increment();
-      expect(CounterObject.getCount()).toBe(1);
+      expect(counterObject.getCount()).toBe(0);
+      counterObject.increment();
+      expect(counterObject.getCount()).toBe(1);
     });
 
     test('counter call decrement method', () => {
-      expect(CounterObject.getCount()).toBe(1);
-      CounterObject.decrement();
-      expect(CounterObject.getCount()).toBe(0);
+      expect(counterObject.getCount()).toBe(1);
+      counterObject.decrement();
+      expect(counterObject.getCount()).toBe(0);
     });
   });
 });
