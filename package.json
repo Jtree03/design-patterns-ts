@@ -37,5 +37,8 @@
         "diagnostics": true
       }
     }
+  },
+  "peerDependencies": {
+    "minimist": "^1.2.6"
   }
 }
